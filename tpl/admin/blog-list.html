@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Apricot v 1.2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/loader-style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <link rel="stylesheet" href="assets/css/social.css">
+
+    <link rel="shortcut icon" href="assets/ico/minus.png">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!-- TOP NAVBAR -->
+    <nav role="navigation" class="navbar navbar-static-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="entypo-menu"></span>
+                </button>
+                <button class="navbar-toggle toggle-menu-mobile toggle-left" type="button">
+                    <span class="entypo-list-add"></span>
+                </button>
+
+                <div id="logo-mobile" class="visible-xs">
+                   <h1>Apricot<span>v1.3</span></h1>
+                </div>
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                <ul style="margin-right:0;" class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="icon-gear"></span>&#160;&#160;设置</a>
+                        <ul role="menu" class="dropdown-setting dropdown-menu">
+
+                            <li class="theme-bg">
+                                <div id="button-bg"></div>
+                                <div id="button-bg2"></div>
+                                <div id="button-bg3"></div>
+                                <div id="button-bg5"></div>
+                                <div id="button-bg6"></div>
+                                <div id="button-bg7"></div>
+                                <div id="button-bg8"></div>
+                                <div id="button-bg9"></div>
+                                <div id="button-bg10"></div>
+                                <div id="button-bg11"></div>
+                                <div id="button-bg12"></div>
+                                <div id="button-bg13"></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hidden-xs">
+                        <a class="toggle-left" href="#">
+                            <span style="font-size:20px;" class="entypo-list-add"></span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- /END OF TOP NAVBAR -->
+    {include file='admin/side-bar.html'}
+    <!--  PAPER WRAP -->
+    <div class="wrap-fluid">
+        <div class="container-fluid paper-wrap bevel tlbr">
+            <!-- CONTENT -->
+            <!--TITLE -->
+            <div class="row">
+                <div id="paper-top">
+                    <div class="col-sm-3">
+                        <h2 class="tittle-content-header">
+                            <span class="entypo-doc-text"></span>
+                            <span>Blog List
+                            </span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <!--/ TITLE -->
+
+            <!--CONTENT-->
+            <div class="row" style="margin-top:30px;padding:0 15px;">
+                <!--  BLOG CONTENT -->
+                <div class="col-sm-8">
+                    {foreach $data as $value}
+                    <div class="blog-list-nest">
+
+                        <div class="blog-list-content">
+                            <h2>{$value.title}</h2>
+
+                            <button class="btn btn-info pull-right" onclick="window.location.href='admin.php?controller=admin&method=newsadd&id={$value.id}'">编辑</button>
+                            <button class="btn btn-info pull-right"  onclick="window.location.href='admin.php?controller=admin&method=newsdel&id={$value.id}'">删除</button>
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="#">
+                                        <span class="entypo-network"></span>&nbsp;2 Days Ago</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="entypo-chat"></span>&nbsp;2 Comments</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="entypo-share"></span>&nbsp;14 Shares</a>
+                                </li>
+                            </ul>
+
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                    {foreachelse}
+                    <p>暂无新闻</p>
+                    {/foreach}
+                    <div class="page-list">
+                        {foreach $page as $value}
+                        {$value}
+                        {/foreach}
+                    </div>
+                </div>
+                <!--  END OF BLOG CONTENT -->
+            </div>
+
+        </div>
+    </div>
+    <!--  END OF PAPER WRAP -->
+
+    <!-- MAIN EFFECT -->
+    <script type="text/javascript" src="assets/js/preloader.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/load.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script src="assets/js/flatvideo/jquery.fitvids.js"></script>
+
+    <script>
+    // Basic FitVids Test
+    $(".blog-list-nest").fitVids();
+    // Custom selector and No-Double-Wrapping Prevention Test
+    $(".blog-list-nest").fitVids();
+    // Custom selector and No-Double-Wrapping Prevention Test
+    </script>
+
+</body>
+
+</html>
