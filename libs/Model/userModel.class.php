@@ -8,7 +8,7 @@
 
 	class userModel{
 
-        public $_table = 'user';
+        public $_table = 'admin';
         function findOne_by_username($username){
             return DB::findByUsername($this->_table,$username);
         }
@@ -16,13 +16,18 @@
             $sql = "select * from ".$this->_table;
             return DB::getAll($sql);
         }
-        function deleteById($id){
-            return DB::delete($this->_table, 'id='.$id);
-        }
+
 
         function update($data,$id){
             return DB::update($data,$this->_table,'id="'.$id.'"');
         }
 
+        function delById($id){
+            return DB::delete($this->_table,'id="'.$id.'"');
+        }
+
+        function insert($data){
+            return DB::insert($this->_table, $data);
+        }
 
     }

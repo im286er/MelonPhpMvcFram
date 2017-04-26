@@ -89,9 +89,9 @@
 					{foreach $data as $value}
 						<tr>
 			    				<td>{$value.id}</td> 
-			    				<td><a href="admin.php?controller=admin&method=sliderClassAddPage&id={$value.id}&title={$value.class_name}">{$value.class_name}</a></td> 
+			    				<td><a href="admin.php?controller=admin&method=sliderImgList&id={$value.id}">{$value.class_name}</a></td>
 			    				<td><input type="image" src="img/images/icn_edit.png" title="Edit"
-										   onclick="window.location.href='admin.php?controller=admin&method=sliderImgList&id={$value.id}'">
+										   onclick="window.location.href='admin.php?controller=admin&method=sliderClassAddPage&id={$value.id}&title={$value.class_name}'">
 									<input type="image" src="img/images/icn_trash.png" title="Trash"
 										   onclick="window.location.href='admin.php?controller=admin&method=newsdel&id={$value.id}'">
 								</td>

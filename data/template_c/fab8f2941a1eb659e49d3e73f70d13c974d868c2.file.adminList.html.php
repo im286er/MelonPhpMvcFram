@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2017-03-03 17:49:08
+<?php /* Smarty version Smarty-3.1.16, created on 2017-04-27 00:55:10
          compiled from "tpl\admin\adminList.html" */ ?>
 <?php /*%%SmartyHeaderCode:3030358b93c1434c882-52772007%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fab8f2941a1eb659e49d3e73f70d13c974d868c2' => 
     array (
       0 => 'tpl\\admin\\adminList.html',
-      1 => 1488533937,
+      1 => 1493225706,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.16',
+  'unifunc' => 'content_58b93c14436e80_37606028',
   'variables' => 
   array (
     'data' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.16',
-  'unifunc' => 'content_58b93c14436e80_37606028',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58b93c14436e80_37606028')) {function content_58b93c14436e80_37606028($_smarty_tpl) {?><!doctype html>
 <html>
@@ -124,8 +124,9 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['value']->value['username'];?>
 </td>
-                        <td><input type="image" src="img/images/icn_edit.png" title="Edit" onclick="window.location.href='admin.php?controller=admin&method=addAdmin&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
-'"><input type="image" src="img/images/icn_trash.png" title="Trash" onclick="window.location.href='admin.php?controller=admin&method=newsdel&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+                        <td><input type="image" src="img/images/icn_edit.png" title="Edit" onclick="window.location.href='admin.php?controller=user&method=editAdmin&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+&username=<?php echo $_smarty_tpl->tpl_vars['value']->value['username'];?>
+'"><input type="image" src="img/images/icn_trash.png" title="Trash" onclick="window.location.href='admin.php?controller=user&method=adminDel&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 '"></td>
                     </tr>
                     <?php }

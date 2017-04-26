@@ -13,6 +13,12 @@
     <script src="img/js/hideshow.js" type="text/javascript"></script>
     <script src="img/js/jquery.tablesorter.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="img/js/jquery.equalHeight.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="tpl/umeditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="tpl/umeditor/ueditor.all.min.js"> </script>
+
+    <script type="text/javascript" charset="utf-8" src="tpl/umeditor/lang/zh-cn/zh-cn.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function()
             {
@@ -53,7 +59,7 @@
 
 <header id="header">
     <hgroup>
-        <h1 class="site_title"><a href="#">后台管理面板</a></h1>
+        <h1 class="site_title"><a href="index.html">后台管理面板</a></h1>
         <h2 class="section_title"></h2><div class="btn_view_site"><a href="index.php">查看网站</a></div>
     </hgroup>
 </header> <!-- end of header bar -->
@@ -64,7 +70,7 @@
         <!-- <a class="logout_user" href="#" title="Logout">Logout</a> -->
     </div>
     <div class="breadcrumbs_container">
-        <article class="breadcrumbs"><a href="admin.php?controller=admin">后台管理中心</a> <div class="breadcrumb_divider"></div> <a class="current">管理员管理列表</a></article>
+        <article class="breadcrumbs"><a href="admin.php？controller=admin">后台管理系统</a> <div class="breadcrumb_divider"></div> <a class="current">增加轮播</a></article>
     </div>
 </section><!-- end of secondary bar -->
 
@@ -72,54 +78,32 @@
 
 <section id="main" class="column">
 
-    <article class="module width_full">
-        <header><h3 class="tabs_involved">管理员管理列表</h3>
-        </header>
-        <div class="tab_container">
-            <div id="tab1" class="tab_content">
-                <table class="tablesorter" cellspacing="0" style="margin:0">
-                    <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>用户名</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {foreach $data as $value}
-                    <tr>
-                        <td>{$value.id}</td>
-                        <td>{$value.username}</td>
-                        <td><input type="image" src="img/images/icn_edit.png" title="Edit" onclick="window.location.href='admin.php?controller=user&method=editAdmin&id={$value.id}&username={$value.username}'"><input type="image" src="img/images/icn_trash.png" title="Trash" onclick="window.location.href='admin.php?controller=user&method=adminDel&id={$value.id}'"></td>
-                    </tr>
-                    {foreachelse}
-                    <tr>
-                        <td  colspan=4>
-                            暂无管理员
-                        </td>
-                    </tr>
-                    {/foreach}
-                    </tbody>
-                </table>
-            </div><!-- end of #tab1 -->
+    <form id="form1" name="form1" method="post" action="admin.php?controller=user&method=addAdmin">
+        <article class="module width_full">
+            <header><h3>新增管理员</h3></header>
+            <footer>
+                <div>
+                    <lable>用户名：</lable>
+                    <input type="text" name="title" style="width:20%;" value="{$data.username|default:''}">
+                    <label for="">密码：</label>
+                    <input type="text" name="password" style="width:20%;">
+                    <input type="hidden" name="id" value="{$data.id|default:''}">
+                    <input type="submit" name="submit" value="发布" class="alt_btn">
+                </div>
+            </footer>
+        </article>
+    </form>
 
-            <div id="tab2" class="tab_content">
 
-            </div><!-- end of #tab2 -->
-
-        </div><!-- end of .tab_container -->
-        <!--
-        <div class="page-list">
-            {foreach $page as $value}
-            {$value}
-            {/foreach}
-        </div>
-        -->
-    </article><!-- end of content manager article -->
-    <div class="spacer"></div>
 </section>
 
+<script type="text/javascript">
 
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('editor');
+
+</script>
 </body>
 
 </html>

@@ -25,7 +25,7 @@
 		}
 		public function login(){
 			if(!isset($_POST['submit'])){
-				VIEW::display('admin/adminLogin.html');
+				VIEW::display('admin/login.html');
 			}else{
 
 				$this->checklogin();
@@ -57,7 +57,7 @@
 			$pageList = $this->getPageList("newsList","news",$curPage,$size);
 			VIEW::assign(array('data'=>$data));
             VIEW::assign(array('page'=>$pageList));
-			VIEW::display('admin/blog-list.html');
+			VIEW::display('admin/newslist.html');
 		}
 
 		//删除新闻

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2017-03-03 09:42:27
+<?php /* Smarty version Smarty-3.1.16, created on 2017-04-26 19:05:10
          compiled from "tpl\admin\sliderImgList.html" */ ?>
 <?php /*%%SmartyHeaderCode:1826158a4881e83b1b9-13219272%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c2633ffc9875c9be0909774f0370fb838646e696' => 
     array (
       0 => 'tpl\\admin\\sliderImgList.html',
-      1 => 1488503979,
+      1 => 1492740102,
       2 => 'file',
     ),
   ),

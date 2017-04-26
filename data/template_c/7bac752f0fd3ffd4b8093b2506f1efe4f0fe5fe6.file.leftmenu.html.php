@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2017-03-03 17:39:15
+<?php /* Smarty version Smarty-3.1.16, created on 2017-04-27 00:38:31
          compiled from "tpl\admin\leftmenu.html" */ ?>
 <?php /*%%SmartyHeaderCode:26293539d921c295dd0-60924783%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7bac752f0fd3ffd4b8093b2506f1efe4f0fe5fe6' => 
     array (
       0 => 'tpl\\admin\\leftmenu.html',
-      1 => 1488533473,
+      1 => 1493224070,
       2 => 'file',
     ),
   ),
@@ -29,7 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<ul class="toggle">
 		<li class="icn_jump_back"><a href="admin.php?controller=admin&method=logout">退出登录</a></li>
 		<li class="icn_categories"><a href="admin.php?controller=user&method=adminList">管理员管理</a></li>
-		<li class="icn_new_article"><a href="admin.php?controller=user&method=addAdmin">添加管理员</a></li>
+		<li class="icn_new_article"><a href="admin.php?controller=user&method=addAdminPage">添加管理员</a></li>
 	</ul>
 	<h3>组件管理</h3>
 	<ul class="toggle">

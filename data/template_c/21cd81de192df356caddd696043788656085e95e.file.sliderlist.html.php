@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2017-03-03 09:41:45
+<?php /* Smarty version Smarty-3.1.16, created on 2017-04-27 00:16:41
          compiled from "tpl\admin\sliderlist.html" */ ?>
 <?php /*%%SmartyHeaderCode:678858a3caf0ed5a87-48072988%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '21cd81de192df356caddd696043788656085e95e' => 
     array (
       0 => 'tpl\\admin\\sliderlist.html',
-      1 => 1488503979,
+      1 => 1493223397,
       2 => 'file',
     ),
   ),
@@ -121,12 +121,12 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
 						<tr>
 			    				<td><?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 </td> 
-			    				<td><a href="admin.php?controller=admin&method=sliderClassAddPage&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
-&title=<?php echo $_smarty_tpl->tpl_vars['value']->value['class_name'];?>
+			    				<td><a href="admin.php?controller=admin&method=sliderImgList&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['value']->value['class_name'];?>
-</a></td> 
+</a></td>
 			    				<td><input type="image" src="img/images/icn_edit.png" title="Edit"
-										   onclick="window.location.href='admin.php?controller=admin&method=sliderImgList&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+										   onclick="window.location.href='admin.php?controller=admin&method=sliderClassAddPage&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+&title=<?php echo $_smarty_tpl->tpl_vars['value']->value['class_name'];?>
 '">
 									<input type="image" src="img/images/icn_trash.png" title="Trash"
 										   onclick="window.location.href='admin.php?controller=admin&method=newsdel&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
