@@ -26,7 +26,7 @@ class DB {
 	}
 	public static function findByUsername($tableName,$username,$fields='*'){
 		
-		return self::$db->findByUsername($tableName,$username,$fields='*');
+		return self::$db->findByUsername($tableName,$username,$fields);
 	}
 
 	public static function insert($arr,$table){

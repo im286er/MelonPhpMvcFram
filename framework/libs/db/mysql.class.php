@@ -130,8 +130,10 @@ class mysql{
             return $result;
 	}
 	public static function findByUserName($tabName,$username,$fields='*',$fileName=null,$overTime=3600,$fileDir='cach/'){           
-            $sql='SELECT %s FROM %s WHERE username=%d';       
+            $sql="SELECT %s FROM %s WHERE username='%s'";
+
             $sql = sprintf($sql,self::parseFields($fields),$tabName,$username);
+
             if(isset($fileName)){
                 $fileName = md5($sql);
                 $res = self::readCach($fileName,$overTime,$fileDir);
